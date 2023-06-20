@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f95ff;
+      }
+
+      .cls-2 {
+        filter: url(#drop-shadow-5);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-7);
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-6);
+      }
+    </style>
+    <filter id="drop-shadow-5" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="-10"/>
+      <feGaussianBlur result="blur" stdDeviation="17"/>
+      <feFlood flood-color="#545454" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-6" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="-10"/>
+      <feGaussianBlur result="blur-2" stdDeviation="17"/>
+      <feFlood flood-color="#545454" flood-opacity="1"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-7" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="-10"/>
+      <feGaussianBlur result="blur-3" stdDeviation="17"/>
+      <feFlood flood-color="#545454" flood-opacity="1"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" width="1920" height="1078"/>
+  <path class="cls-2" d="m887.06,565.18c-10.29,0-20.36.83-30.14,2.41-41.98-51.81-111.01-85.62-189.06-85.62s-144.94,32.78-187.1,83.25c-1.15-.02-2.32-.04-3.48-.04-91.31,0-165.32,64.86-165.32,144.85s74.02,144.86,165.32,144.86c18.11,0,35.54-2.56,51.86-7.28,38.67,25.37,86.7,40.39,138.73,40.39,56.44,0,108.15-17.68,148.34-47.06,21.48,8.94,45.5,13.95,70.86,13.95,91.31,0,165.32-64.86,165.32-144.86s-74.02-144.85-165.32-144.85Z"/>
+  <path class="cls-4" d="m748,914.7c0,90.19-83.45,163.3-186.38,163.3H34.25c-11.76,0-23.22-1.13-34.25-3.27v-269.85c11.03-2.14,22.49-3.27,34.25-3.27,12.93,0,25.49,1.39,37.52,3.97,30.5-84.93,121.07-146.54,228.09-146.54,7.5,0,14.92.3,22.24.9,77.06,6.23,143.52,44.51,181.87,99.48,18.16-5.18,37.53-8.01,57.65-8.01,49.62,0,94.71,16.99,128.11,44.69,25.94,21.51,44.82,49.48,53.3,80.97,3.25,12.08,4.97,24.68,4.97,37.63Z"/>
+  <path class="cls-3" d="m1920,709.31v368.69H600.27c-.65-1.05-1.29-2.11-1.91-3.18-13.39-22.81-21.01-49.06-21.01-76.99,0-44.16,19.06-84.12,49.83-112.95,7.73-7.24,16.2-13.78,25.29-19.51,21.85-13.77,47.29-22.85,74.72-25.72,6.18-.66,12.47-.99,18.83-.99,11.14,0,22.02,1.05,32.54,2.99-.28-4.39-.48-8.81-.48-13.27,0-10.98.9-21.76,2.65-32.28,16.43-99.21,107.38-175.11,217.12-175.11,6.89,0,13.7.3,20.41.89,12.21,1.07,24.13,3.08,35.68,5.95,1.43-14.47,4.99-28.37,10.38-41.4,23.84-57.66,83.48-98.55,153.31-98.55,38.5,0,73.88,12.46,101.9,33.28,55.64-90.64,159.46-151.65,278.45-151.65,177.64,0,321.66,135.9,321.66,303.53,0,12.33-.87,24.46-2.38,36.4.91-.05,1.83-.09,2.74-.13Z"/>
+</svg>

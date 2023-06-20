@@ -1,0 +1,257 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input.toggle {
+  width: 70px !important;
+  height: 34px !important;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/sky.light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+  box-shadow: rgba(127, 127, 127, 0.607) 0px 0px 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 5px;
+  bottom: 4px;
+  background-image: url(../img/sun.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: 0.4s;
+  transition: all 0.4s ease;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-image: url(../img/sky.dark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(33px);
+  background-image: url(../img/night.svg);
+  background-size: 25px;
+}
+
+.content-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.login {
+  width: 450px;
+  height: 550px;
+  position: relative;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffc400c0;
+  filter: blur(1px);
+  border-radius: 50px;
+}
+
+.form {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon-pass {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon-show-pass {
+  position: absolute;
+  left: 88%;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon-caps-lock {
+  position: absolute;
+  left: 80%;
+}
+
+.dark .icon-caps-lock {
+  color: rgb(61, 61, 61);
+}
+
+.dark .icon-show-pass:hover {
+  color: #ffc400c0;
+}
+
+.light .icon-show-pass:hover {
+  color: #ffc600;
+}
+
+.dark .icon-show-pass {
+  color: rgb(61, 61, 61);
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin h1 {
+  height: 20px;
+  font-size: 40px;
+}
+
+.signin p {
+  width: 300px;
+  text-align: center;
+}
+
+.light input {
+  border-style: none !important;
+  border-radius: 50px;
+  width: 350px;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.987);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.dark input {
+  border-style: none !important;
+  border-radius: 50px;
+  width: 350px;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.987);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.light input:focus {
+  /* outline: none; */
+  outline: 1.5px solid #1e96fc;
+}
+
+.dark input:focus {
+  outline: 1.5px solid #1e96fc;
+}
+
+.firstName {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.btn-login {
+  border-style: none !important;
+  width: 366px;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: #1e96fc;
+  transition: 0.2s;
+  cursor: pointer;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.btn-login:hover {
+  background-color: #ffc600;
+}
+
+.btn-login:active {
+  transition: none;
+  background-color: #072ac8;
+}
+
+input::placeholder {
+  color: #9e9e9e;
+}
+
+a:link,
+:visited {
+  text-decoration: none !important;
+  color: #1360e2;
+}
+
+a:active {
+  color: red;
+}
+
+@media (max-width: 800px) {
+  .login {
+    width: 350px;
+    height: 550px;
+    position: relative;
+  }
+
+  .form input,
+  .btn-login {
+    width: 300px;
+  }
+}

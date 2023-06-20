@@ -1,0 +1,24 @@
+.dark {
+  background-image: url(../img/darkbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.light {
+  background-image: url(../img/lightbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(58, 58, 58);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.keyboard-visible {
+  background-position: top center;
+  background-size: cover;
+}
