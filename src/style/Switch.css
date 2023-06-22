@@ -76,14 +76,14 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /* BOX ELEMENTS SIGNIN */
 
 .login {
   width: 450px;
-  height: 550px;
+  height: 600px;
   position: relative;
 }
 
@@ -136,13 +136,13 @@ a:active {
 
 .form {
   position: absolute;
-  top: 62%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 27px;
+  gap: 20px;
 }
 
 /* FORM ELEMENTS ARRANGEMENT */
@@ -259,6 +259,20 @@ input::placeholder {
   border-radius: 5px;
 }
 
+.alert-pass {
+  position: relative;
+  padding: 10px;
+  background-color: #f44336;
+  border-radius: 10px;
+}
+
+.alert-pass ul {
+  margin: 0;
+  padding-left: 8px;
+  margin-left: 5px;
+  color: white;
+}
+
 /* PASSWORD CHECK LIST */
 
 .password-check-list ul {
@@ -280,7 +294,7 @@ input::placeholder {
   height: 45px;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   background-color: #1e96fc;
   transition: 0.2s;
   cursor: pointer;
@@ -310,5 +324,11 @@ input::placeholder {
   .form input,
   .btn-login {
     width: 300px;
+  }
+
+  .signin h1,
+  p {
+    margin-top: 10px;
+    width: auto;
   }
 }

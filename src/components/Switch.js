@@ -68,6 +68,28 @@ function Switch({ toggleTheme, theme }) {
     return emailRegex.test(value);
   };
 
+  // PASSWORD VALIDATION CONDITION
+
+  const [passError, setPassError] = useState("");
+
+  const [validPass, setValidPass] = useState("");
+  const validatePassword = () => {
+    const hasUpperCase = /[A-Z]/.test(validPass);
+    const hasNumber = /\d/.test(validPass);
+    const hasSpecialChar = /\W/.test(validPass);
+    const hasMinLength = validPass.length >= 6;
+
+    if (!hasUpperCase) {
+      setPassError({ passError });
+    } else if (!hasNumber) {
+      setPassError({ passError });
+    } else if (!hasSpecialChar) {
+      setPassError({ passError });
+    } else if (!hasMinLength) {
+      setPassError({ passError });
+    }
+  };
+
   return (
     <div className="content-page">
       <div
@@ -115,6 +137,7 @@ function Switch({ toggleTheme, theme }) {
                 type={showPassword ? "text" : "password"}
                 placeholder="Type password..."
                 ref={inputRef}
+                onChange={(e) => setValidPass(e.target.value)}
               />
               {/* Icon capslock password */}
               {isCapsLockOn && (
@@ -130,9 +153,22 @@ function Switch({ toggleTheme, theme }) {
                 onClick={handelToggleShowPassword}
               />
             </div>
+            {passError && (
+              <div class="alert-pass">
+                <ul>
+                  <li>At least a capital letter</li>
+                  <li>At least one special character</li>
+                  <li>Minimum 6 characters</li>
+                </ul>
+              </div>
+            )}
           </div>
           <div>
-            <button className="btn-login" type="submit">
+            <button
+              className="btn-login"
+              type="submit"
+              onClick={validatePassword}
+            >
               Login
             </button>
           </div>
