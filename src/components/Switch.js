@@ -14,18 +14,19 @@ function Switch({ toggleTheme, theme }) {
     toggleTheme();
   };
 
-  const [password, setPassword] = useState("");
+  //  Password show & capslock on/off
+
   const [showPassword, setShowPassword] = useState(false);
   const [isCapsLockOn, setIsCapsLockOn] = useState(false);
   const inputRef = useRef(null);
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+  //  Show password button
 
   const handelToggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
+  //  Password capslock
 
   const handleKeyUp = (event) => {
     setIsCapsLockOn(event.getModifierState("CapsLock"));
@@ -45,6 +46,27 @@ function Switch({ toggleTheme, theme }) {
       inputRef.current.style.fontVariant = "normal";
     }
   }, [isCapsLockOn]);
+
+  //  Validate email format
+
+  const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setValidEmail(validateEmail(e.target.value));
+  };
+
+  const validateEmail = (value) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Email is inavalid");
+    } else {
+      setError("");
+    }
+    return emailRegex.test(value);
+  };
 
   return (
     <div className="content-page">
@@ -71,29 +93,37 @@ function Switch({ toggleTheme, theme }) {
         </div>
         <div className="form">
           <div className="form-grup">
-            <label className="firstName">Email / Username</label>
+            <label className="text-label">Email / Username</label>
             <input
-              className="email"
+              className={validEmail ? "input-valid" : "input-invalid"}
               type="email"
               placeholder="Type e-mail..."
+              onChange={handleEmailChange}
             />
+            {/* Email format alert message */}
+            {error && (
+              <div class="alert">
+                <strong>Danger!</strong> Email is invalid
+              </div>
+            )}
           </div>
           <div className="form-grup">
-            <label className="firstName">Password</label>
+            <label className="text-label">Password</label>
             <div className="icon-pass">
               <input
                 className="password"
                 type={showPassword ? "text" : "password"}
-                onChange={handlePasswordChange}
                 placeholder="Type password..."
                 ref={inputRef}
               />
+              {/* Icon capslock password */}
               {isCapsLockOn && (
                 <FontAwesomeIcon
                   icon={faArrowUpFromBracket}
                   className="icon-caps-lock"
                 />
               )}
+              {/* Icon show password */}
               <FontAwesomeIcon
                 icon={showPassword ? faLock : faEye}
                 className="icon-show-pass"
@@ -102,7 +132,9 @@ function Switch({ toggleTheme, theme }) {
             </div>
           </div>
           <div>
-            <button className="btn-login">Login</button>
+            <button className="btn-login" type="submit">
+              Login
+            </button>
           </div>
           <div
             className="reset-pass"
@@ -113,7 +145,7 @@ function Switch({ toggleTheme, theme }) {
             }}
           >
             <p>Having trouble loggin in?</p>
-            <a href="/">Reset you password</a>
+            <a href="/">Reset password</a>
           </div>
         </div>
       </div>
